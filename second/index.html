@@ -10,13 +10,33 @@
 </head>
 <body>
   <div id="app">
-    <input type="text" v-on:input="changeTitle">
     <h1 v-once>{{ title }}</h1>
+    <hr>
+    <input type="text" v-on:input="changeTitle">
     <h2>{{ title2 }}</h2>
     <p>{{ seyHello() }} - <a v-bind:href="link">Google!</a></p>
     <hr>
     <p v-html="finishedLink"></p>
     <input type="text" v-bind:value="name">
+    <hr>
+    <button v-on:click="increase(2, $event)">Click me!</button>
+    <button v-on:click="counter++">Click me!</button>
+    <p>Click count: {{ counter * 2 > 10 ? 'Greate 10' : 'Smaller 10' }}</p>
+    <hr>
+    <p v-on:mousemove="updateCoordinates">
+      Coordinates: {{ x }} / {{ y }}
+      - <span v-on:mousemove.stop="">DEAD SPOT</span>
+    </p>
+    <hr>
+    <p>KeyUp:</p>
+    <input type="text" v-on:keyup.enter="alertMe">
+    <hr>
+    <input type="text" v-model="name2">
+    <p>{{ name2 }}</p>
+    <hr>
+    <button v-on:click="decrease()">Decrease</button>
+    <button v-on:click="secondCounter++">secondCounter</button>
+    <p>{{ result() }} | {{ output }}</p>
   </div>
   <script src="index.js"></script>
 </body>
