@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    .demo {
+      width: 100px;
+      height: 100px;
+      background: gray;
+      display: inline-block;
+      margin: 10px;
+    }
+    .red {
+      background: red;
+    }
+    .green {
+      background: green;
+    }
+    .blue {
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="demo"
+         :class="{'red': attachRed, 'blue': !attachRed}"
+         @click="attachRed = !attachRed">
+    </div>
+    <div class="demo"
+         :class="{'red': attachRed}"></div>
+    <div class="demo"></div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
