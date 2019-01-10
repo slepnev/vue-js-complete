@@ -33,8 +33,12 @@
          @click="attachRed = !attachRed">
     </div>
     <div class="demo"
-         :class="{'red': attachRed}"></div>
-    <div class="demo"></div>
+         :style="myStyle"></div>
+    <div class="demo"
+         :style="[myStyle, {'height': width + 'px'}]"></div>
+    <hr>
+    <input type="text" v-model="color">
+    <input type="text" v-model="width">
   </div>
   <script src="index.js"></script>
 </body>

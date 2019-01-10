@@ -1,7 +1,9 @@
 new Vue({
   el: '#app',
   data: {
-    attachRed: false
+    attachRed: false,
+    width: 100,
+    color: 'gray'
   },
   methods: {
 
@@ -11,6 +13,12 @@ new Vue({
       return {
         red: this.attachRed,
         blue: !this.attachRed
+      };
+    },
+    myStyle: function () {
+      return {
+        backgroundColor: this.color,
+        width: this.width + 'px'
       };
     }
   }
