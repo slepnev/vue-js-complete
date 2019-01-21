@@ -1,3 +1,8 @@
+Vue.component('hellow', {
+  template: '<h1>Hello!</h1>'
+});
+
+
 var vm1 = new Vue({
   el: '#app',
   data: {
@@ -26,7 +31,7 @@ var vm1 = new Vue({
   }
 });
 
-vm1.$mount('#app1');
+vm1.$mount('#app');
 
 console.log(vm1.$data.title);
 vm1.$refs.heading.innerText = 'Something else';
@@ -47,9 +52,10 @@ var vm2 = new Vue({
   }
 });
 
-var vm3 = new Vue({
-  template: '<h1>Hello!</h1>'
-});
-
-vm3.$mount('#app3');
-document.getElementById('app3').appendChild(vm3.$el);
+// var vm3 = new Vue({
+//   el: 'hello',
+//   template: '<h1>Hello!</h1>'
+// });
+//
+// vm3.$mount();
+// document.getElementById('app3').appendChild(vm3.$el);
