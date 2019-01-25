@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="col-12">
     <app-server-status v-for="server in 5"></app-server-status>
   </div>
 </template>
@@ -13,3 +13,9 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+  div{
+    border: 1px solid blue;
+  }
+</style>
