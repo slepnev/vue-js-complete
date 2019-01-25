@@ -1,21 +1,23 @@
 <template>
-  <div>
+  <div class="container">
     <app-header></app-header>
-    <app-server></app-server>
+    <hr>
+    <div class="row">
+      <app-servers></app-servers>
+    </div>
+    <hr>
     <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-  import ServerStatus from './components/Server/ServerStatus.vue';
-  import Home from './components/Server/Home.vue';
+  import Servers from './components/Server/Servers.vue';
   import Header from './components/Shared/Header.vue';
   import Footer from './components/Shared/Footer.vue';
 
   export default {
     components: {
-      'app-server-status': ServerStatus,
-      'app-server': Home,
+      'app-servers': Servers,
       'app-header': Header,
       'app-footer': Footer,
     }
@@ -23,5 +25,5 @@
 </script>
 
 <style lang="scss">
-
+  @import "~bootstrap/scss/bootstrap.scss";
 </style>
