@@ -34,6 +34,9 @@
     methods: {
       newQuote(quote) {
         if(quote) {
+          if (this.quotes.length >= this.maxQuotes) {
+            return alert('Please delete Quotes first');
+          }
           this.quotes.push(quote);
         }
       },
